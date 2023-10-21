@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Text Editor</title>
+  <link rel="manifest" href="./manifest.json">
+  <link rel="stylesheet" href="./stylesheet.css">
+</head>
+
+<body>
+  <textarea id="editor"></textarea>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/simple-text-editor/sw.js').then(registration => {
+          console.log('ServiceWorker registered:', registration);
+        }).catch(error => {
+          console.log('ServiceWorker registration failed:', error);
+        });
+      });
+    }
+  </script>
+</body>
+
+</html>
