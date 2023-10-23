@@ -7,15 +7,19 @@
   <title>Simple Text Editor</title>
   <link rel="manifest" href="./manifest.json">
   <link rel="stylesheet" href="./stylesheet.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
 </head>
 
 <body>
-  <textarea id="editor"></textarea>
+  <pre><code id="editor" class="language-javascript"></code></pre>
+  
+  <script src="./index.js"></script>
 
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/simple-text-editor/sw.js').then(registration => {
+        navigator.serviceWorker.register('./src-sw.js').then(registration => {
           console.log('ServiceWorker registered:', registration);
         }).catch(error => {
           console.log('ServiceWorker registration failed:', error);
@@ -24,5 +28,4 @@
     }
   </script>
 </body>
-
 </html>
