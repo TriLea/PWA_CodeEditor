@@ -2,30 +2,41 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
     background-color: #f4f4f4;
 }
 
-#editor {
-    width: 100%;
-    min-height: 90vh;
-    padding: 20px;
-    box-sizing: border-box;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    font-family: 'Courier New', Courier, monospace;
-    overflow-y: auto; /* Scrollable if content exceeds the container */
+textarea#text-editor {
+    width: 80%;
+    height: 300px;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
 }
 
-#editor::after {
-    content: '|';
-    animation: blink 1s infinite;
+button#install-button {
+    font-size: 16px;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-@keyframes blink {
-    0%, 49% {
-        opacity: 1;
-    }
-    50%, 100% {
-        opacity: 0;
-    }
+button#install-button:hover {
+    background-color: #218838;
+}
+
+button#install-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
 }
