@@ -1,5 +1,5 @@
 <div style="text-align: center;">
-    <img src="./ss1.png" style="width: 50vw" alt="Project Screenshot"/>
+    <img src="./ss1.png" style="width: 40vw" alt="Project Screenshot"/>
 </div>
 
 # PWA_CodeEditor
