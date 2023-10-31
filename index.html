@@ -8,9 +8,9 @@
   <link rel="manifest" href="./manifest.json">
   <link rel="stylesheet" href="./stylesheet.css">
 
-  <!--for syntax highlighting-->
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/themes/prism.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/prism.min.js"></script> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/codemirror.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/mode/javascript/javascript.min.js"></script>
 
 </head>
 
@@ -18,8 +18,6 @@
   <textarea id="text-editor"></textarea>
   <!-- <pre><code class="language-javascript"></code></pre> -->
   <button id="install-button" hidden>Install App</button>
-
-  <script src="./index.js"></script>
 
   <script>
     if ('serviceWorker' in navigator) {
@@ -31,6 +29,7 @@
     }
   </script>
 
+  <script src="./index.js"></script>
 </body>
 
 </html>

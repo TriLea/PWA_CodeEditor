@@ -1,3 +1,5 @@
+console.log("index.js is loaded");
+
 let deferredPrompt;
 
 window.addEventListener('beforeinstallprompt', (e) => {
@@ -22,6 +24,14 @@ document.getElementById('install-button').addEventListener('click', (e) => {
       console.log('User dismissed the A2HS prompt');
     }
     deferredPrompt = null;
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const editor = CodeMirror.fromTextArea(document.getElementById('text-editor'), {
+    lineNumbers: true,
+    mode: "javascript",
+    theme: "default"
   });
 });
 

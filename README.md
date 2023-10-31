@@ -1,3 +1,5 @@
+![Project Screenshot](url)
+
 # PWA_CodeEditor
 A simple progressive web app text editor
 using workbox, webpack, and express

@@ -40,3 +40,12 @@ button#install-button:disabled {
     background-color: #ccc;
     cursor: not-allowed;
 }
+
+.CodeMirror {
+    width: 80%;
+    min-height: 300px;
+    resize: vertical;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 5%;
+}
